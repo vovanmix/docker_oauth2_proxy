@@ -11,6 +11,6 @@ RUN tar -xf /tmp/oauth2_proxy-2.2.0.linux-amd64.go1.8.tar.gz -C ./bin --strip-co
 
 # Expose the ports we need and setup the ENTRYPOINT w/ the default argument
 # to be pass in.
-EXPOSE 8080 4180
+EXPOSE 4180
 ENTRYPOINT [ "./bin/oauth2_proxy" ]
-CMD [ "--upstream=http://0.0.0.0:8080/", "--http-address=0.0.0.0:4180" ]
+CMD [ "--http-address=0.0.0.0:4180" ]
